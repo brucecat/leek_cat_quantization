@@ -1,10 +1,17 @@
 import "@repo/ui/styles.css";
 import { Button } from "@repo/ui";
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { netGetStockDetail } from "@/utils/services";
 
 const App = () => {
   const [count, setCount] = useState(0);
+
+  useEffect(()=>{
+    netGetStockDetail({id: 1}).then(res=>{
+      console.log(res);
+    })
+  }, [])
 
   return (
     <>

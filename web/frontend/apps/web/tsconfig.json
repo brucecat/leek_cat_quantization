@@ -1,4 +1,10 @@
 {
   "extends": "@repo/typescript-config/react-app.json",
-  "include": ["src"]
+  "include": ["src"],
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  }
 }

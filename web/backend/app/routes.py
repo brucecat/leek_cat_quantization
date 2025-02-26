@@ -262,3 +262,11 @@ def get_comment_like_count():
 
 
 # 获取个股信息
+@app.route('/api/stock/detail', methods=['POST'])
+def get_stock_detail():
+    
+    print(request)
+    print(request.json)
+    print(request.form)
+    return jsonify({"code": 400, "message": "commentid is required"}), 400
+
