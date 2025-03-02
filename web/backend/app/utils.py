@@ -24,3 +24,10 @@ def generate_user_uuid():
 def get_project_root():
     return os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 
+
+# 解析Json数据
+# def parse_json(request):
+#     try:
+#         return request.get_json()
+#     except:
+#         return None

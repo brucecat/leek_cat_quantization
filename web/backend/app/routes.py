@@ -1,6 +1,6 @@
 from app import app
 from flask import request, jsonify
-from app.controllers import photo, album, user, like, comment
+from app.controllers import photo, album, user, like, comment, stock
 from app.models import Photo, Album, User
 
 # 拆分token
@@ -10,12 +10,7 @@ def split_token(request):
     except:
         return None
 
-# 解析Json数据
-# def parse_json(request):
-#     try:
-#         return request.get_json()
-#     except:
-#         return None
+
 
 @app.route('/', methods=['GET'])
 def index():
@@ -268,5 +263,6 @@ def get_stock_detail():
     print(request)
     print(request.json)
     print(request.form)
-    return jsonify({"code": 400, "message": "commentid is required"}), 400
+
+    return stock.get_stock_detail()
 
