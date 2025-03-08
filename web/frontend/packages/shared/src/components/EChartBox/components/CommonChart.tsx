@@ -2,8 +2,7 @@
 import type { ECBasicOption } from 'echarts/types/dist/shared'
 import { useECharts } from '../hooks/useECharts'
 import { useEffect, forwardRef, useImperativeHandle } from 'react'
-import { useEveryIntoView } from '../hooks/useEveryIntoView'
-import { useMemoizedFn } from '@flow-engine-formily/react'
+import { useMemoizedFn } from 'ahooks'
 import useResizeObserver from '../hooks/useResizeObserver'
 
 interface CommonChartProps {

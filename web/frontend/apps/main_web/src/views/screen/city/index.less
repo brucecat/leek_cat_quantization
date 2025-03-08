@@ -1,0 +1,123 @@
+.screen-city {
+  background: url('@/assets/img/screen/city_bg.jpg') no-repeat;
+  min-height: 100%;
+  .screen-city-header {
+    background: url('@/assets/img/screen/city_header_bg.png') no-repeat 100%
+      100%;
+    height: 100px;
+    text-align: center;
+  }
+  .screen-city-content {
+    min-width: 1024px;
+    max-width: 1920px;
+    display: flex;
+    column-gap: 10px;
+    padding: 10px;
+  }
+
+  // 公共class
+  .chart-box {
+    height: 305px;
+    border: 1px solid rgba(25, 186, 139, 0.17);
+    background: rgba(255, 255, 255, 0.04);
+    position: relative;
+    margin-bottom: 15px;
+    padding: 10px;
+    // 上左、上右
+    &::before,
+    &::after {
+      width: 20px;
+      height: 20px;
+      content: '';
+      border-top: 2px solid #02a6b5;
+      position: absolute;
+      top: 0;
+    }
+    &::before {
+      left: 0;
+      border-left: 2px solid #02a6b5;
+    }
+    &::after {
+      right: 0;
+      border-right: 2px solid #02a6b5;
+    }
+
+    // 下左、下右
+    & .chart-box-suffix::before,
+    & .chart-box-suffix::after {
+      width: 20px;
+      height: 20px;
+      content: '';
+      border-bottom: 2px solid #02a6b5;
+      position: absolute;
+      bottom: 0;
+    }
+    & .chart-box-suffix::before {
+      left: 0;
+      border-left: 2px solid #02a6b5;
+    }
+    & .chart-box-suffix::after {
+      right: 0;
+      border-right: 2px solid #02a6b5;
+    }
+
+    // title
+    .chart-box-title {
+      color: #fff;
+      text-align: center;
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+
+  .map-box {
+    &-top {
+      height: 160px;
+      background: rgba(101, 132, 226, 0.1);
+      padding: 10px;
+      margin-bottom: 80px;
+      .value {
+        display: flex;
+        align-items: center;
+        font-size: 64px;
+        font-family: electronicFont;
+        color: #ffeb7b;
+        border: 1px solid rgba(25, 186, 139, 0.17);
+        padding: 10px;
+        position: relative;
+        &::before {
+          width: 30px;
+          height: 15px;
+          content: '';
+          border-top: 2px solid #02a6b5;
+          border-left: 2px solid #02a6b5;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+        &::after {
+          width: 30px;
+          height: 15px;
+          content: '';
+          border-bottom: 2px solid #02a6b5;
+          border-right: 2px solid #02a6b5;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+        }
+        .divider {
+          width: 1px;
+          height: 40px;
+          background: rgba(255, 255, 255, 0.7);
+        }
+      }
+      .label {
+        display: flex;
+        justify-content: space-between;
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 18px;
+        margin-top: 15px;
+      }
+    }
+  }
+}

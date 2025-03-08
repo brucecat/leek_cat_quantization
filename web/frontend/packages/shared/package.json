@@ -9,7 +9,7 @@
     "es"
   ],
   "scripts": {
-    "build": "rimraf ./es && cpy raw \"../es\" --cwd=src && tsc -p tsconfig.build.json && swc ./src -d es",
+    "build": "rimraf ./es && tsc -p tsconfig.build.json && swc ./src -d es",
     "lint": "eslint . --ext .js,.ts,.jsx,.tsx --fix"
   },
   "dependencies": {
